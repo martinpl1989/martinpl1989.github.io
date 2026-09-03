@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alanis | Noche de Máscaras</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Josefin+Sans:wght@100;300;400;600&display=swap");
 
       :root {
         color-scheme: dark;
-        --bg-black: #0b0b0c;
-        --bg-panel: #141416;
-        --gold: #d5a846;
-        --gold-soft: #f2d796;
-        --text: #f3ead8;
-        --text-muted: #c6b690;
-        --font-sensual: "Great Vibes", "Lucida Handwriting", cursive;
+        --bg-black: #020202;
+        --bg-panel: #070707;
+        --gold: #d5b36a;
+        --gold-soft: #eee1c1;
+        --red: #6f090f;
+        --text: #f2f0eb;
+        --text-muted: #aaa49c;
+        --font-sensual: "Bodoni Moda", "Times New Roman", serif;
         --font-elegant: "Cormorant Garamond", "Book Antiqua", serif;
-        --font-display: "Cinzel", "Times New Roman", serif;
-        --hero-image: url("alanis/assets/images/alanis-mask-bg.jpg");
+        --font-display: "Josefin Sans", Arial, sans-serif;
+        --hero-image: url("alanis/assets/images/WhatsApp Image 2026-09-01 at 9.29.49 PM.jpeg");
       }
 
       * {
@@ -27,30 +28,30 @@
 
       body {
         margin: 0;
-        background:
-          radial-gradient(circle at 50% -20%, #2f2518 0%, #100f10 50%, #080808 100%);
+        background: #020202;
         color: var(--text);
         font-family: var(--font-elegant);
       }
 
       .section {
-        width: min(1080px, 92vw);
-        margin: 1.25rem auto;
-        border: 1px solid rgba(213, 168, 70, 0.5);
-        background: linear-gradient(160deg, rgba(20, 20, 22, 0.94), rgba(10, 10, 11, 0.96));
-        border-radius: 24px;
+        width: min(1080px, 100%);
+        margin: 0 auto;
+        border: 0;
+        border-bottom: 1px solid rgba(213, 179, 106, 0.22);
+        background: var(--bg-panel);
+        border-radius: 0;
         overflow: hidden;
-        box-shadow: 0 16px 42px rgba(0, 0, 0, 0.45);
+        box-shadow: none;
       }
 
       .hero {
         position: relative;
-        min-height: 88vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.7)),
-          var(--hero-image),
-          url("alanis/assets/images/87e22a62965f141aa08e93699b0b3527.jpg") center 20%/cover no-repeat;
+        width: min(768px, 100%);
+        aspect-ratio: 3 / 4;
+        min-height: 0;
+        background: #000 var(--hero-image) center/contain no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
       }
 
@@ -62,44 +63,63 @@
         justify-items: center;
         text-align: center;
         padding: 1rem;
+        isolation: isolate;
+      }
+
+      .hero-time {
+        margin: 0;
+        color: var(--gold-soft);
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 4vw, 2.8rem);
+        font-weight: 300;
+        letter-spacing: 0.18em;
+        text-shadow: 0 0 14px rgba(238, 225, 193, 0.8);
       }
 
       .script {
         font-family: var(--font-sensual);
-        font-size: clamp(3rem, 11vw, 8rem);
+        font-size: clamp(2.6rem, 10vw, 7rem);
         color: #fff;
         margin: 0;
         line-height: 1;
-        font-weight: 700;
-        letter-spacing: 0.02em;
+        font-weight: 400;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-shadow: 0 0 16px rgba(255, 255, 255, 0.52);
       }
 
       .xv {
         margin: 0.6rem 0 0;
-        font-size: clamp(2.5rem, 10vw, 6.2rem);
-        letter-spacing: 0.08em;
-        color: var(--gold);
-        text-shadow: 0 0 14px rgba(213, 168, 70, 0.35);
+        font-size: clamp(2rem, 6vw, 4.5rem);
+        letter-spacing: 0.22em;
+        color: var(--gold-soft);
+        font-weight: 300;
+        text-shadow: 0 0 14px rgba(238, 225, 193, 0.5);
       }
 
       .save-date {
-        padding: 2.6rem 1rem 3rem;
+        padding: 4rem 1rem;
+        background: #030303;
         text-align: center;
       }
 
       .title-script {
         margin: 0;
         font-family: var(--font-sensual);
-        font-size: clamp(2.3rem, 7vw, 5rem);
-        color: var(--gold-soft);
-        font-weight: 700;
+        font-family: var(--font-display);
+        font-size: clamp(1.7rem, 5vw, 3.4rem);
+        color: var(--text);
+        font-weight: 100;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
       }
 
       .date-card {
         width: min(540px, 86vw);
         margin: 1.2rem auto 0;
-        border: 2px solid rgba(213, 168, 70, 0.7);
-        border-radius: 20px;
+        border: 1px solid rgba(213, 179, 106, 0.55);
+        border-radius: 0;
         background: rgba(8, 8, 10, 0.9);
         padding: 1.4rem 1rem;
       }
@@ -333,10 +353,6 @@
       }
 
       @media (max-width: 760px) {
-        .hero {
-          min-height: 72vh;
-        }
-
         .countdown {
           grid-template-columns: repeat(2, minmax(94px, 160px));
         }
@@ -354,18 +370,6 @@
   </head>
   <body>
     <section class="section hero">
-      <div class="hero-content">
-        <p class="script">Alanis</p>
-        <h1 class="xv">Mis XV</h1>
-      </div>
-    </section>
-
-    <section class="section save-date">
-      <h2 class="title-script">Save the Date</h2>
-      <div class="date-card">
-        <p class="date-main">Sabado 21 de Noviembre 2026</p>
-        <p class="date-sub">7:00 PM</p>
-      </div>
     </section>
 
     <section class="section invite-text">
@@ -377,7 +381,7 @@
       </div>
     </section>
 
-    <section class="section countdown-wrap ornate">
+    <section class="section countdown-wrap">
       <h2 class="title-script">Countdown</h2>
       <div class="countdown" aria-label="Cuenta regresiva">
         <div class="count-item"><strong id="days">0</strong><span>Días</span></div>
@@ -391,41 +395,15 @@
       <h2 class="title-script">Lugar</h2>
       <div class="location-box">
         <p>IHANNA Prestige Salon de Eventos</p>
-        <p>Sábado 21 de noviembre de 2026, 7:00 PM</p>
+        <p>Domingo 22 de noviembre de 2026, 6:00 PM</p>
         <a class="button" href="https://www.google.com/maps/search/?api=1&query=Ihanna+Prestige+Salon+de+Eventos" target="_blank" rel="noopener noreferrer">Ubicación</a>
-      </div>
-    </section>
-
-    <section class="section itinerary">
-      <h2 class="title-script" style="text-align: center;">Itinerario</h2>
-      <div class="timeline">
-        <div class="event">
-          <div class="event-time">7:00 PM</div>
-          <div class="event-name">Bienvenida y cóctel</div>
-        </div>
-        <div class="event">
-          <div class="event-time">7:30 PM</div>
-          <div class="event-name">Sesión de fotos</div>
-        </div>
-        <div class="event">
-          <div class="event-time">8:00 PM</div>
-          <div class="event-name">Presentación y vals</div>
-        </div>
-        <div class="event">
-          <div class="event-time">8:30 PM</div>
-          <div class="event-name">Cena</div>
-        </div>
-        <div class="event">
-          <div class="event-time">9:30 PM</div>
-          <div class="event-name">Inicio de fiesta</div>
-        </div>
       </div>
     </section>
 
     <section class="section dress">
       <h3>Dress Code</h3>
-      <p>Noche elegante de máscaras</p>
-      <p>Usa colores y fondos alusivos</p>
+      <p>Gala</p>
+      <p>No se permite vestir de rojo</p>
     </section>
 
     <section class="section rsvp">
@@ -440,10 +418,10 @@
       <div class="hash-box">#ALANISXV</div>
     </section>
 
-    <footer>Alanis XV | Noviembre 21, 2026</footer>
+    <footer>Alanis XV | Noviembre 22, 2026</footer>
 
     <script>
-      const targetDate = new Date("2026-11-21T19:00:00").getTime();
+      const targetDate = new Date("2026-11-22T18:00:00").getTime();
 
       function pad(value) {
         return String(value).padStart(2, "0");
